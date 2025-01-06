@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  ::-webkit-scrollbar {
+    background: black;
+    padding: 4px;
+    width: 16px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #002a32;
+    border-radius: 10px;
+  }
+  
+  .header {
+    /* border: 2px solid red; */
+    min-height: 100vh;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .head-content {
+    position: relative;
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .start {
+    font-size: 30px;
+    padding: 20px 40px;
+    background: transparent;
+    border: 2px solid white;
+    color: #fff;
+    border-radius: 10px;
+  }
+  
+  #web-head {
+    color: #fff;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.685);
+    font-size: 60px;
+    text-align: center;
+  }
+  
+  /* video code  */
+  .web-video {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
+    scale: 1;
+    /* border: 2px solid red; */
+  }
+  
+  /* main */
+  
+  main {
+    background-image: url(../assets/magicalPaper.jpg);
+    padding-block: 20px;
+    position: relative;
+  }
+  main::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100px;
+    left: 0;
+    background: linear-gradient(to bottom, transparent, black, black);
+    /* background: red; */
+    top: -100px;
+  }
+
+  /* main */
+
+  
+  
+  .about {
+    padding: 50px;
+  }
+  
+  .about h2 {
+    font-size: 40px;
+  }
+  
+  .about > div {
+    max-width: 100%;
+    display: flex;
+    padding-block: 30px;
+  }
+  
+  .para-collections {
+    min-width: 50%;
+    font-size: 24px;
+    line-height: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .about div img {
+    max-width: 50%;
+    position: relative;
+    top: -30px;
+  }
+  
+  footer {
+    background: #000;
+    columns: #fff;
+    text-align: center;
+  }
+  
+  footer p {
+    color: #fff;
+    padding: 40px;
+  }
+  
