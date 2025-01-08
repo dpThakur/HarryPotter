@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  ::-webkit-scrollbar {
+    background: black;
+    padding: 4px;
+    width: 16px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #002a32;
+    border-radius: 10px;
+  }
+  body{
+    background: #5E503F;
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    background: linear-gradient(
+      to bottom,
+      black,
+      rgba(0, 0, 0, 0.767),
+      rgba(0, 0, 0, 0.411)
+    );
+    /* background: #000; */
+  }
+  
+  .logo {
+    height: 100px;
+    padding: 10px;
+    /* filter: invert(); */
+  }
+  
+  .logo img {
+    height: 100%;
+    width: 200px;
+  }
+  
+  .navlist {
+    display: flex;
+    gap: 30px;
+    padding-inline-end: 30px;
+  }
+  
+  .navlinks {
+    font-size: 25px;
+  }
+  
+  .navlinks a {
+    color: #fff;
+  }
+
+.books{
+  color: beige;
+  margin-top: 160px;
+  padding-left:700px;
+  margin-bottom: 20px;
+  
+}
+.main{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+}
+.book-card{
+  height: 530px;
+  width: 330px;
+  background: #C6AC8F17;
+  border-radius: 5px;
+  border: 2px solid #C6AC8F;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+text-align:left;
+color: white;
+
+
+}  
+.img-link{
+  height: 340px;
+  border-radius: 5px;
+  width: 100%;
+  object-fit: contain;
+  padding-top: 15px;
+}
+.book-name, .release-date{
+  font-size: 20px;
+  padding-left: 10px;
+}
+.release-date, .author{
+  color:black;
+  padding-left: 10px;
+}
