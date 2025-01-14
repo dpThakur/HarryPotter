@@ -50,6 +50,7 @@ body::-webkit-scrollbar-thumb {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    border: 2px solid white;
 
 }
 
@@ -59,7 +60,7 @@ nav img {
 }
 
 .navul {
-    height: 50px;
+    /* height: 50px; */
     display: flex;
     flex-direction: row;
     width: fit-content;
@@ -78,10 +79,35 @@ svg {
     stroke: #C623C7;
     width: 2rem;
     height: 3rem;
+    display: none;
 }
 
+.fa-xmark{
+    font-size: 35px;
+    color: #C623C7;
+}
+.navanker1{
+    position: relative;
+}
+
+.licontainer{
+    display: flex;
+    flex-direction: column;
+}
+#anker{
+    width: fit-content;
+    box-shadow:  0 0 5px white;
+    position:absolute;
+    left: -50px;
+    top: 50px;
+    background-color:#130D21;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
 
 /* end  */
+
 
 
 .heading {
