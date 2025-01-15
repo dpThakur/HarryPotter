@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style-type: none;
+        text-decoration: none;
+        font-family: sans-serif;
+        scroll-behavior: smooth;
+      }
+      body{
+        background-color: #22333b;
+      }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 999;
+            background: linear-gradient(
+              to bottom,
+              black,
+              rgba(0, 0, 0, 0.767),
+              rgba(0, 0, 0, 0.411)
+            );
+            /* background: #000; */
+          }
+          
+          .logo {
+            height: 100px;
+            padding: 10px;
+            filter: invert();
+          }
+          
+          .logo img {
+            height: 100%;
+          }
+          
+          .navlist {
+            display: flex;
+            gap: 30px;
+            padding-inline-end: 30px;
+            list-style-type: none;
+          }
+          
+          .navlinks {
+            font-size: 25px;
+          }
+          
+          .navlinks a {
+            color: #fff;
+          }
+          .book-name{
+            margin-top: 150px;
+            margin-left: 750px;
+            color: white;
+            font-size: 35px;
+          }
+         
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://www.mtgnexus.com/img/ccc/logos/10297/12571.png?d=1687129549" alt="harry potter logo">
+            </div>
+
+            <ul class="navlist">
+                <li class="navlinks">
+                    <a id="books" href="./books/books.html">Books</a>
+                </li>
+                <li class="navlinks">
+                    <a id="spells" href="./spells/spells.html">Spells</a>
+                </li>
+                <li class="navlinks">
+                    <a id="characters" href="./characters/characters.html">Characters</a>
+                </li>
+                <li class="navlinks">
+                    <a id="potions" href="./potions/potions.html">Potions</a>
+                </li>
+            </ul>
+        </nav>
+  </header>  
+  <h1 class="book-name"></h1>
+  <main class="about-book">
+    <div class="card-about-book">
+      <img class="4
+       " src="" alt="">
+    </div>
+  </main> 
+
+
+
+  <script src="veiwspells.js">
+
+  </script>
+</body>
+</html>

@@ -50,7 +50,6 @@ body::-webkit-scrollbar-thumb {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    border: 2px solid white;
 
 }
 
@@ -74,12 +73,16 @@ nav img {
     font-weight: 100;
     color: rgba(245, 245, 245, 0.874);
 }
+.svg{
+    display: flex;
+}
 
 svg {
     stroke: #C623C7;
     width: 2rem;
     height: 3rem;
-    display: none;
+    /* display: none; */
+
 }
 
 .fa-xmark{
@@ -93,6 +96,7 @@ svg {
 .licontainer{
     display: flex;
     flex-direction: column;
+    display: none;
 }
 #anker{
     width: fit-content;
@@ -175,13 +179,15 @@ h4 {
 }
 .cards {
     width: 23.9%;
-    height: 500px;
+    height: 490px;
     border: 2px solid rgb(255, 255, 255);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 20px;
     align-items: center;
     flex-direction: column;
     border-radius: 5px;
+    position: relative;
 }
 
 .card {
@@ -218,15 +224,18 @@ ul {
 }
 
 .topi {
-    white-space: nowrap;
     width: 300px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     overflow: hidden;
     font-weight: 400;
+    height: 25px;
     font-size: 15px;
+
 }
 
 .anker {
-    width: 100%;
+    width: 95%;
     height: 45px;
     background-color: #C623C7;
     border-radius: 10px;
@@ -234,6 +243,7 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
+
 
 }
 
