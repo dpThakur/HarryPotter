@@ -6,12 +6,6 @@ const url4 = "https://api.potterdb.com/v1/spells?page[number]=3&page[size]=16";
 
 
 
-
-
-
-
-
-
 const cardsimage = document.querySelectorAll(".card > img");
 const cardsname = document.querySelectorAll(".name");
 const cardscharm = document.querySelectorAll(".charm");
@@ -29,19 +23,19 @@ const cardstpoi = document.querySelectorAll(".topi");
 
 //     maindata.forEach((datas, idx) => {
 
-       
+
 //     });
-    
+
 
 // })()
 
-    
+
 
 
 // console.log(cardsimage);
 
 
-async function getData(url){
+async function getData(url) {
     let jsonData = await fetch(url);
     let jsObject = await jsonData.json();
     return jsObject.data;
@@ -54,9 +48,9 @@ async function getData(url){
     let data2 = await getData(url2)
     let data3 = await getData(url3)
     let data4 = await getData(url4)
-    
-    let data = [data1,data2,data3,data4].flat()
-    data.forEach((datas,idx) => {
+
+    let data = [data1, data2, data3, data4].flat()
+    data.forEach((datas, idx) => {
         if (datas.attributes.image) {
             cardsimage[idx].src = datas.attributes.image;
         }
@@ -69,11 +63,12 @@ async function getData(url){
         cardsname[idx].innerHTML = datas.attributes.name;
         cardscharm[idx].innerHTML = datas.attributes.category;
         cardstpoi[idx].innerHTML = datas.attributes.incantation;
-       
 
-       });
-       console.log(data.length);
-       
+
+    });
+
+
+
 
     // console.log(data1)
     // console.log(data2)
@@ -93,27 +88,53 @@ const loadmore = document.querySelector(".load");
 loadmore.addEventListener("click", myFunction);
 function myFunction() {
 
-   if(displayIndex == display.length){
-    loadmore.removeEventListener("click",myFunction)
-    console.log("removeEventListener");
-    
-   }
-   else{
-    display[displayIndex].setAttribute("style","display:flex");
-    displayIndex++
-    console.log(displayIndex);
-    
-   }
+    if (displayIndex == display.length) {
+        loadmore.removeEventListener("click", myFunction)
+        console.log("removeEventListener");
 
+    }
+    else {
+        display[displayIndex].setAttribute("style", "display:flex");
+        displayIndex++
+        console.log(displayIndex);
 
-  
-  
-}
-    
+    }
 
 
 
 
+};
+
+
+let conditon = false;
+
+
+const liicon = document.querySelector(".licontainer");
+const svgicon = document.querySelector(".svg");
+svgicon.addEventListener("click", svgfuntion)
+function svgfuntion() {
+
+    if (conditon == false) {
+        svgicon.setAttribute("style", "display:none");
+        liicon.setAttribute("style", "display:flex");
+        conditon = true;
+    }
+    else if(conditon == true){
+        svgicon.setAttribute("style", "display:flex");
+        liicon.setAttribute("style", "display:none");
+        conditon=false;
+
+    }
+
+
+};
+
+
+
+
+
+// svgicon.setAttribute("style", "display:none");
+// liicon.setAttribute("style", "display:flex");
 
 
 
@@ -125,7 +146,6 @@ function myFunction() {
 
 
 
-    
 
 
 
