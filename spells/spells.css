@@ -133,12 +133,25 @@ svg {
     font-size: 17px;
     padding-inline: 40px;
     border: none;
+    color: #130D21;
+    font-size: 20px;
+}
+.hlo-world{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-h4 {
-    font-weight: 300;
-    font-size: 15px;
-    padding-inline-start: 40px;
+.hlo-world li{
+    font-weight: 550;
+    color: rgba(245, 245, 245, 0.897);
+    font-size: 14px;
+    
+}
+h4{
+    font-weight: 330;
 }
 
 
