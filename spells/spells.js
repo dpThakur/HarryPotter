@@ -1,47 +1,31 @@
+// apis 
+
 const url1 = "https://api.potterdb.com/v1/spells?page[number]=1&page[size]=100";
 const url2 = "https://api.potterdb.com/v1/spells?page[number]=2&page[size]=100";
 const url3 = "https://api.potterdb.com/v1/spells?page[number]=3&page[size]=100";
 const url4 = "https://api.potterdb.com/v1/spells?page[number]=3&page[size]=16";
 
+// apis end 
 
-
+// card Select 
 
 const cardsimage = document.querySelectorAll(".card > img");
 const cardsname = document.querySelectorAll(".name");
 const cardscharm = document.querySelectorAll(".charm");
 const cardstpoi = document.querySelectorAll(".topi");
+const hloworld = document.querySelector(".hlo-world >li");
+ 
+// end 
 
-
-
-
-
-
-// (async function fetchdata() {
-//     const jsonData = await fetch(url)
-//     const finaldata = await jsonData.json()
-//     const maindata = finaldata.data;
-
-//     maindata.forEach((datas, idx) => {
-
-
-//     });
-
-
-// })()
-
-
-
-
-// console.log(cardsimage);
-
-
+// get data 
 async function getData(url) {
     let jsonData = await fetch(url);
     let jsObject = await jsonData.json();
     return jsObject.data;
 
-}
 
+
+}
 
 (async function getFullData() {
     let data1 = await getData(url1)
@@ -58,27 +42,18 @@ async function getData(url) {
             cardsimage[idx].src = "https://potterdb.com/images/missing_spell.svg";
 
         }
-
-
         cardsname[idx].innerHTML = datas.attributes.name;
         cardscharm[idx].innerHTML = datas.attributes.category;
         cardstpoi[idx].innerHTML = datas.attributes.incantation;
-
-
+        hloworld.innerHTML = data.length;
     });
 
-
-
-
-    // console.log(data1)
-    // console.log(data2)
-    // console.log(data3)
-    // console.log(data4)
 }
 )()
 
+// end 
 
-
+// loadmore 
 
 
 let displayIndex = 1;
@@ -100,42 +75,29 @@ function myFunction() {
 
     }
 
-
-
-
 };
 
+// end 
 
-let conditon = false;
-
+// addEventListener 
 
 const liicon = document.querySelector(".licontainer");
 const svgicon = document.querySelector(".svg");
 svgicon.addEventListener("click", svgfuntion)
 function svgfuntion() {
-
-    if (conditon == false) {
-        svgicon.setAttribute("style", "display:none");
-        liicon.setAttribute("style", "display:flex");
-        conditon = true;
-    }
-    else if(conditon == true){
-        svgicon.setAttribute("style", "display:flex");
-        liicon.setAttribute("style", "display:none");
-        conditon=false;
-
-    }
-
+    svgicon.setAttribute("style", "display:none");
+    liicon.setAttribute("style", "display:flex");
 
 };
 
+liicon.addEventListener("click", cutmark)
+function cutmark() {
+    svgicon.setAttribute("style", "display:flex");
+    liicon.setAttribute("style", "display:none");
 
+};
 
-
-
-// svgicon.setAttribute("style", "display:none");
-// liicon.setAttribute("style", "display:flex");
-
+// end 
 
 
 
