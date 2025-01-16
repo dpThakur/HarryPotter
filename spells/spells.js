@@ -14,7 +14,7 @@ const cardsname = document.querySelectorAll(".name");
 const cardscharm = document.querySelectorAll(".charm");
 const cardstpoi = document.querySelectorAll(".topi");
 const hloworld = document.querySelector(".hlo-world >li");
- 
+const ankerlink = document.querySelectorAll(".anker")
 // end 
 
 // get data 
@@ -46,6 +46,9 @@ async function getData(url) {
         cardscharm[idx].innerHTML = datas.attributes.category;
         cardstpoi[idx].innerHTML = datas.attributes.incantation;
         hloworld.innerHTML = data.length;
+        ankerlink[idx].href = ankerlink[idx].href + `?id=${data.id}`;
+        
+
     });
 
 }
@@ -102,7 +105,14 @@ function cutmark() {
 
 
 
-
+console.log(data.attributes);
+console.log(moviesLink[idx]);
+MoviePosters[idx].src = data.attributes.poster;
+MovieNames[idx].innerHTML = data.attributes.slug
+  .toUpperCase()
+  .replaceAll("-", " ");
+moviesLink[idx].href = moviesLink[idx].href + `?id=${data.id}`;
+textLinks[idx].href = textLinks[idx].href + `?id=${data.id}`;
 
 
 
