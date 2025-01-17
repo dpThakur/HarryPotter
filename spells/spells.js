@@ -46,7 +46,7 @@ async function getData(url) {
         cardscharm[idx].innerHTML = datas.attributes.category;
         cardstpoi[idx].innerHTML = datas.attributes.incantation;
         hloworld.innerHTML = data.length;
-        ankerlink[idx].href = ankerlink[idx].href + `?id=${data.id}`;
+        ankerlink.href = ankerlink.href + `?id=${datas.id}`;
         
 
     });
@@ -101,18 +101,6 @@ function cutmark() {
 };
 
 // end 
-
-
-
-
-console.log(data.attributes);
-console.log(moviesLink[idx]);
-MoviePosters[idx].src = data.attributes.poster;
-MovieNames[idx].innerHTML = data.attributes.slug
-  .toUpperCase()
-  .replaceAll("-", " ");
-moviesLink[idx].href = moviesLink[idx].href + `?id=${data.id}`;
-textLinks[idx].href = textLinks[idx].href + `?id=${data.id}`;
 
 
 
