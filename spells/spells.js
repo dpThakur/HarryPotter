@@ -33,8 +33,8 @@ async function getData(url) {
     let data3 = await getData(url3)
     let data4 = await getData(url4)
 
-    let data = [data1, data2, data3, data4].flat()
-    data.forEach((datas, idx) => {
+    let datafull = [data1, data2, data3, data4].flat()
+    datafull.forEach((datas, idx) => {
         if (datas.attributes.image) {
             cardsimage[idx].src = datas.attributes.image;
         }
@@ -45,8 +45,11 @@ async function getData(url) {
         cardsname[idx].innerHTML = datas.attributes.name;
         cardscharm[idx].innerHTML = datas.attributes.category;
         cardstpoi[idx].innerHTML = datas.attributes.incantation;
-        hloworld.innerHTML = data.length;
-        ankerlink.href = ankerlink.href + `?id=${datas.id}`;
+        hloworld.innerHTML = datafull.length;
+        ankerlink.href = ankerlink[idx].href + `?id=${datas.id}`;
+        
+        
+        
         
 
     });
