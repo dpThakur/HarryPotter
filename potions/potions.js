@@ -7,7 +7,6 @@ const potionDiff = document.querySelectorAll(".difficulty");
 const potioneffect = document.querySelectorAll(".effect");
 const potionChar = document.querySelectorAll(".character");
 
-
 async function getData(url) {
   let jsonData = await fetch(url);
   let jsObject = await jsonData.json();
@@ -23,7 +22,8 @@ async function getData(url) {
     if (datas.attributes.image) {
       potionimg[idx].src = datas.attributes.image;
     } else {
-      potionimg[idx].src = "https://m.media-amazon.com/images/I/71EIXccMpZL._AC_UF350,350_QL80_.jpg";
+      potionimg[idx].src =
+        "https://m.media-amazon.com/images/I/71EIXccMpZL._AC_UF350,350_QL80_.jpg";
     }
 
     potionName[idx].innerHTML = datas.attributes.name;
