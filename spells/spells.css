@@ -236,7 +236,6 @@ ul {
 }
 
 .topi {
-    width: 300px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -247,7 +246,7 @@ ul {
 }
 
 .anker {
-    width: 95%;
+    width: 100%;
     height: 45px;
     background-color: #C623C7;
     border-radius: 10px;
