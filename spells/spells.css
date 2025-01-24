@@ -15,7 +15,7 @@ body {
     width: calc(100% - 12px);
     background-color: #130D21;
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     padding-inline-start: 10px;
@@ -59,7 +59,7 @@ nav img {
 }
 
 .navul {
-    /* height: 50px; */
+    height: 50px;
     display: flex;
     flex-direction: row;
     width: fit-content;
@@ -81,7 +81,7 @@ svg {
     stroke: #C623C7;
     width: 2rem;
     height: 3rem;
-    /* display: none; */
+    
 
 }
 
@@ -94,15 +94,14 @@ svg {
 }
 
 .licontainer{
-    display: flex;
-    flex-direction: column;
     display: none;
+    flex-direction: column;
 }
 #anker{
     width: fit-content;
     box-shadow:  0 0 5px white;
     position:absolute;
-    left: -50px;
+    left: -80px;
     top: 50px;
     background-color:#130D21;
     color: white;
@@ -237,7 +236,6 @@ ul {
 }
 
 .topi {
-    width: 300px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -248,7 +246,7 @@ ul {
 }
 
 .anker {
-    width: 95%;
+    width: 100%;
     height: 45px;
     background-color: #C623C7;
     border-radius: 10px;

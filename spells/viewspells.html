@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="viewspells.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,35 +12,52 @@
 </head>
 
 <body>
-  <header class="header">
-    <nav class="navbar">
-      <div class="logo">
-        <img src="https://www.mtgnexus.com/img/ccc/logos/10297/12571.png?d=1687129549" alt="harry potter logo">
-      </div>
+  <nav class="navbar">
+    <img src="/HarryPotter/assets/logo.svg" alt="" srcset="">
+    <ol class="navul">
+      <a href="https://potterdb.com/about" class="navanker">About</a>
+      <a href="https://docs.potterdb.com/" class="navanker">Docs</a>
+      <a href="https://status.potterdb.com/" class="navanker">Status</a>
+      <ul class="navanker1">
+        <li class="svg">
+          <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+            stroke-linejoin="round" class="w-8 h-8 stroke-current" height="1em" width="1em"
+            xmlns="http://www.w3.org/2000/svg">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </li>
 
-      <ul class="navlist">
-        <li class="navlinks">
-          <a id="books" href="./books/books.html">Books</a>
+        <li class="licontainer">
+          <i class="fa-solid fa-xmark"></i>
+          <ul id="anker">
+            <a href="" class="ianker">Books</a>
+            <a href="" class="ianker">Characters</a>
+            <a href="" class="ianker">Movies</a>
+            <a href="" class="ianker">Potions</a>
+            <a href="" class="ianker">Spells</a>
+          </ul>
         </li>
-        <li class="navlinks">
-          <a id="spells" href="./spells/spells.html">Spells</a>
-        </li>
-        <li class="navlinks">
-          <a id="characters" href="./characters/characters.html">Characters</a>
-        </li>
-        <li class="navlinks">
-          <a id="potions" href="./potions/potions.html">Potions</a>
-        </li>
+
+
+
+
+
+
       </ul>
-    </nav>
+    </ol>
 
-  </header>
+  </nav>
 
-  <h1 class="book-name"></h1>
+
+
   <main class="about-spells">
 
 
-
+    <div class="h1div">
+      <h1 class="book-name"></h1>
+    </div>
     <div class="card-about-spells">
 
 
@@ -57,9 +77,41 @@
     </div>
   </main>
 
+  <footer>
+    <div class="fot">
+      <div class="threecards">
+        <h1>General</h1>
+        <hr>
+        <a href="">Home</a>
+        <a href="">Home</a>
+        <a href="">Imprint</a>
+      </div>
+      <div class="threecards">
+        <h1>Database Search</h1>
+        <hr>
+        <a href="">Books</a>
+        <a href="">Characters</a>
+        <a href="">Movies</a>
+        <a href="">Potions</a>
+        <a href="">Spells</a>
+      </div>
+      <div class="threecards">
+        <h1>Information</h1>
+        <hr>
+        <a href="">API Docs</a>
+        <a href="">Source</a>
+        <a href="">Scrabby</a>
+        <a href="">Sitemap</a>
+      </div>
+    </div>
+    <div class="last">
+      <a href="">Copyright © Potter DB 2024</a>
+    </div>
+  </footer>
 
 
-  <script src="veiwspells.js">
+
+  <script src="viewspells.js">
 
   </script>
 </body>
