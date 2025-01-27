@@ -1,4 +1,3 @@
-// create data 
 
 
 const header = document.querySelector("header");
@@ -45,9 +44,41 @@ function Callcontai() {
 
 }
 
+
+// create data 
+
+
 for (let i = 1; i <= 40; i++) {
-  Callcontai();
+    Callcontai();
 };
+
+
+let displayIndex = 1;
+
+
+const loadmore = document.querySelector(".load");
+loadmore.addEventListener("click", myFunction);
+function myFunction() {
+    
+    for (let i = 1; i <= 20; i++) {
+        Callcontai();
+    };
+
+
+    // if (displayIndex == display.length) {
+    //     loadmore.removeEventListener("click", myFunction)
+    //     console.log("removeEventListener");
+
+    // }
+    // else {
+    //     display[displayIndex].setAttribute("style", "display:flex");
+    //     displayIndex++
+    //     console.log(displayIndex);
+
+    // }
+
+};
+
 
 
 // end 
@@ -72,7 +103,7 @@ const hloworld = document.querySelector(".hlo-world >li");
 const ankerlink = document.querySelectorAll(".anker")
 // end
 
-// get data
+
 async function getData(url) {
     let jsonData = await fetch(url);
     let jsObject = await jsonData.json();
@@ -103,7 +134,7 @@ async function getData(url) {
         cardscharm[idx].innerHTML = datas.attributes.category;
         cardstpoi[idx].innerHTML = datas.attributes.incantation;
         hloworld.innerHTML = datafull.length;
-        ankerlink.href = ankerlink.href + `?id=${datas.id}`;
+        ankerlink[idx].href = ankerlink[idx].href + `?id=${datas.links.self}`;
 
 
 
@@ -115,32 +146,21 @@ async function getData(url) {
 
 // end
 
-// loadmore
 
 
-let displayIndex = 1;
 
 
-const loadmore = document.querySelector(".load");
-loadmore.addEventListener("click", myFunction);
-function myFunction() {
 
 
-    if (displayIndex == display.length) {
-        loadmore.removeEventListener("click", myFunction)
-        console.log("removeEventListener");
 
-    }
-    else {
-        display[displayIndex].setAttribute("style", "display:flex");
-        displayIndex++
-        console.log(displayIndex);
 
-    }
 
-};
 
-// end
+
+
+
+
+
 
 // addEventListener
 
@@ -152,7 +172,6 @@ function svgfuntion() {
     liicon.setAttribute("style", "display:flex");
 
 };
-
 liicon.addEventListener("click", cutmark)
 function cutmark() {
     svgicon.setAttribute("style", "display:flex");
