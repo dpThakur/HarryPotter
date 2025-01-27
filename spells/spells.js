@@ -1,13 +1,11 @@
 // create data 
 
- 
+
 const header = document.querySelector("header");
 const mainplay = document.createElement("div");
 mainplay.className = "display display1";
 header.prepend(mainplay);
-
-for (let i = 1; i <= 40; i++) {
-
+function Callcontai() {
     const displaycreate = document.createElement("div");
     displaycreate.className = "cards";
 
@@ -45,6 +43,10 @@ for (let i = 1; i <= 40; i++) {
     disul.append(disli, disli1, disli2, anker1);
     displaycreate.append(createcard, disul);
 
+}
+
+for (let i = 1; i <= 40; i++) {
+  Callcontai();
 };
 
 
@@ -123,6 +125,7 @@ const loadmore = document.querySelector(".load");
 loadmore.addEventListener("click", myFunction);
 function myFunction() {
 
+
     if (displayIndex == display.length) {
         loadmore.removeEventListener("click", myFunction)
         console.log("removeEventListener");
@@ -158,3 +161,7 @@ function cutmark() {
 };
 
 // end 
+
+
+
+
