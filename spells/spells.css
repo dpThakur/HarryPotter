@@ -13,7 +13,7 @@
 
 body {
     width: calc(100% - 12px);
-    background-color: #130D21;
+    background-color: #130D21 ;
     display: flex;
     justify-content: center;
     align-items: center;
